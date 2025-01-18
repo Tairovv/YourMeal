@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="/src/img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="/src/fonts/nunito-v26-cyrillic_latin-600.woff2" as="font" crossorigin>
+    <link rel="preload" href="/src/fonts/nunito-v26-cyrillic_latin-regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="/src/fonts/nunito-v26-cyrillic_latin-800.woff2" as="font" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <img class="header__logo" src="img/icon/logo.svg" alt="mainLogo">
+
+            <div class="header__title">
+                <div class="header__text">
+                    <h1>Только самые 
+                        <span class="header__title-second"> сочные бургеры </span>
+                     </h1>
+                     <p class="header__appeal">Бесплатная доставка от 30000 СУМ</p>
+                </div>
+                 <img class="header__img" src="img/pic.svg" alt="mainImg">
+            </div>
+            
+        </div>
+    </header>
+    <main class="main container">
+        <div class="main_slider">
+            <div class="icons">
+               <button class="slider_button active" data-content="content1">
+                    Бургеры
+                    <img src="img/icon/icon1.svg" alt="Food Icon 1">
+                </button>
+                <button class="slider_button" data-content="content2">
+                    Закуски
+                    <img src="img/icon/icon2.svg" alt="Food Icon 2" >
+                </button> 
+                <button class="slider_button" data-content="content3">
+                    Хот-Доги
+                    <img src="img/icon/icon3.svg" alt="Food Icon 3" >
+                </button>
+                <button class="slider_button" data-content="content4">
+                    Комбо
+                    <img src="img/icon/icon4.svg" alt="Food Icon 4" >
+                </button>
+                <button class="slider_button" data-content="content5">
+                    Шаурма
+                    <img src="img/icon/icon5.svg" alt="Food Icon 5">
+                </button>
+                <button class="slider_button" data-content="content6">
+                    Пиццы
+                    <img src="img/icon/icon6.svg" alt="Food Icon 6" >
+                </button>
+                <button class="slider_button" data-content="content7"> 
+                    Вок
+                    <img src="img/icon/icon7.svg" alt="Food Icon 7" >
+                </button>
+                <button class="slider_button" data-content="content8">
+                    Десерты
+                    <img src="img/icon/icon8.svg" alt="Food Icon 8" >
+                </button>
+                <button class="slider_button" data-content="content9">
+                    Соусы
+                    <img src="img/icon/icon9.svg" alt="Food Icon 9" >
+                </button>
+            </div>
+
+        </div>
+        <input type="range" class="slider-range" min="0" max="100" value="0">
+
+        <div class="cart-container">
+            <div class="cart-header">
+                <span>Корзина</span>
+                <span class="item-count">0</span>
+            </div>
+            <div class="cart-body">
+                <div class="cart-items">
+                </div> 
+                <div class="cart-footer">
+                    <div class="total">
+                        <span>Итого</span>
+                        <span class="total-price">0CУМ</span>
+                    </div>
+                    <button class="checkout-button">Оформить заказ</button>
+                    <div class="free-delivery">
+                        <div class="delivery-descr">
+                            <img class="delivery-icon" src=img/icon/delivery.svg" alt="">
+                        <p class="delivery-text">Бесплатная доставка</p>
+                        </div>
+                        <button class="delivery-button" onclick="toggleCart()">Cвернуть</button> 
+                    </div>
+                </div> 
+            </div>  
+            
+        </div>
+
+          <div id="content1" class="content-item active menu-container" >
+                    <h2 class="burger-desrc">Бургеры</h2>
+                    
+                   <div class="menu-list">
+                    <div class="menu-item">
+                        <img src="img/icon/burger.svg" alt="Двойной бургер">
+                        <div class="menu-item-details" data-name="Двойной бургер" data-description="Две котлеты, двойная порция сыра и свежие овощи" data-price="30000" data-gram="520Г" data-image="img/icon/burger.svg">
+                            <span class="menu-item-price">30000 СУМ</span>
+                            <span class="menu-item-name">Двойной бургер</span>
+                            <span class="menu-item-gram">520Г</span>
+                            
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Двойной бургер', 30000, 'img/icon/burger.svg', '520Г')">Добавить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/icon/burger1.svg" alt="Завтрак-бургер">
+                        <div class="menu-item-details" data-name="Завтрак-бургер" data-description="Жареное яйцо, бекон и сливочный сыр" data-price="29000" data-gram="480Г" data-image="img/icon/burger1.svg">
+                            <span class="menu-item-price">29000 CУМ</span>
+                            <span class="menu-item-name">Завтрак-бургер</span>
+                            <span class="menu-item-gram">480Г</span>
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Завтрак-бургер', 29000, 'img/icon/burger1.svg', '480Г')">Добавить</button>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/icon/burger2.svg" alt="Бургер из ягнятины">
+                        <div class="menu-item-details" data-name="Бургер из ягнятины" data-description="Котлета из ягнятины, сыр фета и соус дзадзики." data-price="35000" data-gram="590Г" data-image="img/icon/burger2.svg">
+                            <span class="menu-item-price">35000 СУМ</span>
+                            <span class="menu-item-name">Бургер из ягнятины</span>
+                            <span class="menu-item-gram">590Г</span>
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Бургер из ягнятины', 35000, 'img/icon/burger2.svg', '590Г')">Добавить</button>
+                       
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/icon/burger3.svg" alt="Классический чизбургер">
+                        <div class="menu-item-details" data-name="Классический чизбургер" data-description="Супер мясное наслаждение! Большая рубленая котлета из свежего говяжьего мяса покорит вас своей сочностью, а хрустящие листья салата добавят свежести." data-price="26999" data-gram="380Г" data-image="img/icon/burger3.svg">
+                            <span class="menu-item-price">26999 СУМ</span>
+                            <span class="menu-item-name">Классический чизбургер</span>
+                            <span class="menu-item-gram">380Г</span>
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Классический чизбургер', 30000, 'img/icon/burger3.svg', '380Г')">Добавить</button>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/icon/burger4.svg" alt="Вегетарианский бургер">
+                        <div class="menu-item-details" data-name="Вегетарианский бургер" data-description="Чёрная фасолевая котлета, авокадо и ростки." data-price="25500" data-gram="475Г" data-image="img/icon/burger4.svg">
+                            <span class="menu-item-price">25500 СУМ</span>
+                            <span class="menu-item-name">Вегетарианский бургер</span>
+                            <span class="menu-item-gram">475Г</span>
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Вегетарианский бургер', 25500, 'img/icon/burger4.svg', '475Г')">Добавить</button>
+                        
+                    </div>
+                    
+                    <div class="menu-item">
+                        <img src="img/icon/burger5.svg" alt="Морской бургер">
+                        <div class="menu-item-details" data-name="Морской бургер" data-description="Котлета из крабового мяса, свежие овощи и лимонный соус." data-price="28500" data-gram="425Г" data-image="img/icon/burger5.svg">
+                            <span class="menu-item-price">28500 СУМ</span>
+                            <span class="menu-item-name">Морской бургер</span>
+                            <span class="menu-item-gram">425Г</span>
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Морской бургер', 28500, 'img/icon/burger5.svg', '425Г')">Добавить</button>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/icon/burger6.svg" alt="Бургер с грибами">
+                        <div class="menu-item-details" data-name="Бургер с грибами" data-description="Обжаренные грибы и нежный швейцарский сыр." data-price="29500" data-gram="495Г" data-image="img/icon/burger6.svg">
+                            <span class="menu-item-price">29500 СУМ</span>
+                            <span class="menu-item-name">Бургер с грибами</span>
+                            <span class="menu-item-gram">495Г</span>
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Бургер с грибами', 29500, 'img/icon/burger6.svg', '495Г')">Добавить</button>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/icon/burger7.svg" alt="Острый бургер с халапеньо">
+                        <div class="menu-item-details" data-name="Острый бургер с халапеньо" data-description="Сыр пеппер джек, свежие халапеньо и пикантный соус." data-price="32000" data-gram="475Г" data-image="img/icon/burger7.svg">
+                            <span class="menu-item-price">32000 СУМ</span>
+                            <span class="menu-item-name">Бургер с халапеньо</span>
+                            <span class="menu-item-gram">475Г</span>
+                        </div>
+                        <button class="menu-item-button" onclick="addToCart('Острый бургер с халапеньо', 32000, 'img/icon/burger7.svg', '475Г')">Добавить</button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="content2" class="menu-container content-item">
+                <h2 class="sta-desrc">Закуски</h2>
+                
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/starter.svg" alt="Луковые кольца">
+                    <div class="menu-item-details" data-name="Луковые кольца" data-description="Аппетитные луковые кольца с хрустящей корочкой, подаваемые с мягким сливочным соусом. Простая классика, которая всегда в моде." data-price="18000" data-gram="305Г" data-image="img/icon/starter.svg">
+                        <span class="menu-item-price">18000 СУМ</span>
+                        <span class="menu-item-name">Луковые кольца</span>
+                        <span class="menu-item-gram">305Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Луковые кольца', 18000, 'img/icon/starter.svg', '305Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/starter2.svg" alt="Начос с сыром и соусами">
+                    <div class="menu-item-details" data-name="Начос с сыром и соусами" data-description="Хрустящие начос с тягучим сыром, острым халапеньо и нежным гуакамоле. Блюдо, которое соберёт всех за столом." data-price="16500" data-gram="243Г" data-image="img/icon/starter2.svg">
+                        <span class="menu-item-price">16500 СУМ</span>
+                        <span class="menu-item-name">Начос</span>
+                        <span class="menu-item-gram">243Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Начос с сыром и соусами', 16500, 'img/icon/starter2.svg', '243Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/starter3.svg" alt="Мини-бургеры">
+                    <div class="menu-item-details" data-name="Мини-бургеры" data-description="Маленькие, но с большим вкусом! Сочные мини-бургеры с говяжьей котлетой, свежим салатом и сыром — идеальный перекус с оттенком изысканности." data-price="21000" data-gram="211Г" data-image="img/icon/starter3.svg">
+                        <span class="menu-item-price">21000 СУМ</span>
+                        <span class="menu-item-name">Мини-бургеры</span>
+                        <span class="menu-item-gram">211Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Мини-бургеры', 21000, 'img/icon/starter3.svg', '211Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/starter4.svg" alt="Картофель фри с сыром ">
+                    <div class="menu-item-details" data-name="Картофель фри с сыром " data-description="Хрустящий картофель фри, обильно покрытый растопленным сыром и хрустящим беконом, дополнен нежным сливочным соусом. Сытный перекус, который тает во рту." data-price="13500" data-gram="255Г" data-image="img/icon/starter4.svg">
+                        <span class="menu-item-price">13500 СУМ</span>
+                        <span class="menu-item-name">Картофель фри </span>
+                        <span class="menu-item-gram">255Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Картофель фри с сыром ', 13500, 'img/icon/starter4.svg', '255Г')">Добавить</button>
+                    
+                </div>
+            </div>
+        </div>  
+
+            <div id="content3" class="menu-container content-item">
+                <h2 class="burger-desrc">Хот-Доги</h2>
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/hotdog.svg" alt=" Классический хот-дог">
+                    <div class="menu-item-details" data-name=" Классический хот-дог" data-description="Нежная булочка, сочная обжаренная колбаска, заправленная ярким дуэтом кетчупа и горчицы. Посыпка из мелко нарезанного лука и свежей петрушки добавляет хрустящую текстуру и аромат. Настоящая классика, которая порадует каждого." data-price="13500" data-gram="255Г" data-image="img/icon/hotdog.svg">
+                        <span class="menu-item-price">13500 СУМ</span>
+                        <span class="menu-item-name">Классический хот-дог</span>
+                        <span class="menu-item-gram">255Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart(' Классический хот-дог', 13500, 'img/icon/hotdog.svg', '255Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/hotdog1.svg" alt="Гурманский хот-дог ">
+                    <div class="menu-item-details" data-name="Гурманский хот-дог " data-description="Изысканный хот-дог в мягкой булочке, дополненный карамелизованным луком, тягучим сыром и хрустящими жареными луком. Украшение из свежей зелени придаёт блюду аппетитный и насыщенный вид. Превосходный выбор для тех, кто ценит вкус и стиль." data-price="16500" data-gram="295Г" data-image="img/icon/hotdog1.svg">
+                        <span class="menu-item-price">16500 СУМ</span>
+                        <span class="menu-item-name">Гурманский хот-дог </span>
+                        <span class="menu-item-gram">295Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Гурманский хот-дог ', 16500, 'img/icon/hotdog1.svg', '295Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/hotdog2.svg" alt="Острый хот-дог">
+                    <div class="menu-item-details" data-name="Острый хот-дог " data-description="Булочка, полная огня: колбаска с пряными акцентами, ломтики халапеньо, острый майонез и щепотка красного перца. Сверху — тертый чеддер для нежного контраста. Этот хот-дог разогреет ваше настроение и вкусовые рецепторы." data-price="19500" data-gram="275Г" data-image="img/icon/hotdog2.svg">
+                        <span class="menu-item-price">19500 СУМ</span>
+                        <span class="menu-item-name">Острый хот-дог </span>
+                        <span class="menu-item-gram">275Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Острый хот-дог ', 19500, 'img/icon/hotdog2.svg', '275Г')">Добавить</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/hotdog3.svg" alt="Вегетарианский хот-дог ">
+                    <div class="menu-item-details" data-name="Вегетарианский хот-дог" data-description="Цельнозерновая булочка, наполненная овощами на гриле, нежным хумусом и утончённой капелькой бальзамического соуса. Легкий и полезный выбор, который идеально сочетает вкус и заботу о здоровье." data-price="13500" data-gram="255Г" data-image="img/icon/hotdog3.svg">
+                        <span class="menu-item-price">13500 СУМ</span>
+                        <span class="menu-item-name">Вегетарианский хот-дог </span>
+                        <span class="menu-item-gram">255Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Вегетарианский хот-дог ', 13500, 'img/icon/hotdog3.svg', '255Г')">Добавить</button>
+                    
+                </div>
+                </div>
+            </div>
+
+            
+            <div id="content4" class="menu-container content-item">
+                <h2 class="burger-desrc">Комбо</h2>
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/combo.svg" alt=" Гурманское комбо с бургером">
+                    <div class="menu-item-details" data-name=" Гурманское комбо с бургером" data-description="Сочный классический хот-дог с колбаской на гриле, кетчупом и горчицей, украшенный луком и зеленью. В комплект входят порция хрустящего картофеля фри и холодный напиток на выбор. Идеальный набор для быстрого и вкусного перекуса." data-price="33500" data-gram="755Г" data-image="img/icon/combo.svg">
+                        <span class="menu-item-price">33500 СУМ</span>
+                        <span class="menu-item-name">Гурманское комбо с бургером</span>
+                        <span class="menu-item-gram">755Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart(' Гурманское комбо с бургером',33500, 'img/icon/combo.svg', '755Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/combo1.svg" alt="Классическое комбо с хот-догом ">
+                    <div class="menu-item-details" data-name="Классическое комбо с хот-догом " data-description="Изысканный хот-дог в мягкой булочке, дополненный карамелизованным луком, тягучим сыром и хрустящими жареными луком. Украшение из свежей зелени придаёт блюду аппетитный и насыщенный вид. Превосходный выбор для тех, кто ценит вкус и стиль." data-price="36500" data-gram="595Г" data-image="img/icon/combo1.svg">
+                        <span class="menu-item-price">36500 СУМ</span>
+                        <span class="menu-item-name">Классическое комбо с хот-догом </span>
+                        <span class="menu-item-gram">595Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Классическое комбо с хот-догом ', 36500, 'img/icon/combo1.svg', '595Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/combo2.svg" alt="Итальянское комбо с пиццей">
+                    <div class="menu-item-details" data-name="Итальянское комбо с пиццей " data-description="Тонкая пицца с сыром моцарелла, ароматным томатным соусом и сочными начинками на выбор: пепперони, маргарита или грибы. К набору добавлены хрустящие чесночные гренки и охлаждённый напиток. Почувствуйте вкус Италии в каждом кусочке!" data-price="49500" data-gram="675Г" data-image="img/icon/combo2.svg">
+                        <span class="menu-item-price">49500 СУМ</span>
+                        <span class="menu-item-name">Итальянское комбо с пиццей </span>
+                        <span class="menu-item-gram">675Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Итальянское комбо с пиццей ', 49500, 'img/icon/combo2.svg', '675Г')">Добавить</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/combo3.svg" alt="Азиатское комбо с воком ">
+                    <div class="menu-item-details" data-name="Азиатское комбо с воком" data-description="Порция аппетитного вок-блюда: обжаренные овощи, нежное мясо или креветки, лапша или рис в соусе терияки. К этому прилагается мини-салат из свежих овощей с кунжутной заправкой и освежающий напиток. Идеальный выбор для любителей восточной кухни." data-price="43500" data-gram="555Г" data-image="img/icon/combo3.svg">
+                        <span class="menu-item-price">43500 СУМ</span>
+                        <span class="menu-item-name">Азиатское комбо с воком </span>
+                        <span class="menu-item-gram">555Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Азиатское комбо с воком ', 43500, 'img/icon/combo3.svg', '555Г')">Добавить</button>
+                    
+                </div>
+                </div>
+            </div>
+
+            <div id="content5" class="menu-container content-item">
+                <h2 class="burger-desrc">Шаурма</h2>
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/trotilla.svg" alt="Классическая шаурма">
+                    <div class="menu-item-details" data-name="Классическая шаурма" data-description="Сочный гриль-курица, свежие овощи и кремовый чесночный соус, завернутые в мягкую лепёшку. Подана с маринованными овощами, эта шаурма — классика, которая всегда радует своим сбалансированным вкусом." data-price="33500" data-gram="455Г" data-image="img/icon/trotilla.svg">
+                        <span class="menu-item-price">33500 СУМ</span>
+                        <span class="menu-item-name">Классическая шаурма</span>
+                        <span class="menu-item-gram">455Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Классическая шаурма',33500, 'img/icon/trotilla.svg', '455Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/trotilla1.svg" alt="Шаурма с говядиной ">
+                    <div class="menu-item-details" data-name="Шаурма с говядиной" data-description="Нежные ломтики говядины, хрустящий салат, сочные томаты и ароматный тахини соус в поджаренной лепёшке. Подаётся с хрустящим картофелем фри и кетчупом. Идеальный выбор для ценителей насыщенных вкусов." data-price="26500" data-gram="295Г" data-image="img/icon/trotilla1.svg">
+                        <span class="menu-item-price">26500 СУМ</span>
+                        <span class="menu-item-name">Шаурма с говядиной </span>
+                        <span class="menu-item-gram">295Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Шаурма с говядиной', 26500, 'img/icon/trotilla1.svg', '295Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/trotilla2.svg" alt="Вегетарианская шаурма">
+                    <div class="menu-item-details" data-name="Вегетарианская шаурма" data-description="Яркий и полезный микс из овощей на гриле, хумуса и свежей зелени в цельнозерновой лепёшке. Дополняется пикантным соусом и подана на деревянной доске. Лёгкое и вкусное блюдо для тех, кто выбирает растительную кухню." data-price="29500" data-gram="275Г" data-image="img/icon/trotilla2.svg">
+                        <span class="menu-item-price">29500 СУМ</span>
+                        <span class="menu-item-name">Вегетарианская шаурма</span>
+                        <span class="menu-item-gram">275Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Вегетарианская шаурма', 29500, 'img/icon/trotilla2.svg', '275Г')">Добавить</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/trotilla3.svg" alt="Острая шаурма с курицей">
+                    <div class="menu-item-details" data-name="Острая шаурма с курицей" data-description="Гриль-курица с острым майонезом, ломтиками халапеньо и хрустящим салатом, завернутая в слегка поджаренную лепёшку. Подаётся с маринованным халапеньо и охлаждённым напитком. Настоящий взрыв вкусов для любителей острого." data-price="33500" data-gram="355Г" data-image="img/icon/trotilla3.svg">
+                        <span class="menu-item-price">33500 СУМ</span>
+                        <span class="menu-item-name">Острая шаурма </span>
+                        <span class="menu-item-gram">355Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Острая шаурма с курицей', 33500, 'img/icon/trotilla3.svg', '355Г')">Добавить</button>
+                    
+                </div>
+                </div>
+            </div>
+
+            <div id="content6" class="menu-container content-item">
+                <h2 class="burger-desrc">Пицца</h2>
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/pizza1.svg" alt=" Классическая пицца">
+                    <div class="menu-item-details" data-name="Классическая пицца" data-description="Тонкое тесто, ароматный томатный соус, нежная моцарелла и свежие листья базилика. Эта пицца воплощает в себе простоту и изысканность, которые никогда не выходят из моды." data-price="36500" data-gram="355Г" data-image="img/icon/pizza1.svg">
+                        <span class="menu-item-price">36500 СУМ</span>
+                        <span class="menu-item-name">Классическая пицца</span>
+                        <span class="menu-item-gram">355Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Классическая пицца',36500, 'img/icon/pizza1.svg', '355Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/pizza.svg" alt="Вегетарианская пицца">
+                    <div class="menu-item-details" data-name="Вегетарианская пицца" data-description="Сочная комбинация свежих овощей: грибы, сладкий перец, томаты и оливки, уложенные на слой нежного соуса и покрытые расплавленным сыром. Лёгкий и аппетитный выбор для вегетарианцев." data-price="36500" data-gram="595Г" data-image="img/icon/pizza.svg">
+                        <span class="menu-item-price">36500 СУМ</span>
+                        <span class="menu-item-name">Вегетарианская пицца </span>
+                        <span class="menu-item-gram">595Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Вегетарианская пицца ', 36500, 'img/icon/pizza.svg', '595Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/pizza2.svg" alt="Пицца Пепперони">
+                    <div class="menu-item-details" data-name="Пицца Пепперони" data-description="Золотистая корочка, тянущийся сыр моцарелла и пикантные ломтики пепперони, которые придают блюду насыщенный и пряный вкус. Настоящий фаворит для любителей ярких вкусов." data-price="32500" data-gram="675Г" data-image="img/icon/pizza2.svg">
+                        <span class="menu-item-price">32500 СУМ</span>
+                        <span class="menu-item-name">Пицца Пепперони</span>
+                        <span class="menu-item-gram">675Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Пицца Пепперони', 32500, 'img/icon/pizza2.svg', '675Г')">Добавить</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/pizza3.svg" alt="Острая пицца">
+                    <div class="menu-item-details" data-name="Острая пицца" data-description="Кусочки сочной курицы, острый халапеньо, сыр моцарелла и остро-сладкий соус, которые делают каждый кусочек настоящей феерией вкуса. Для тех, кто не боится добавить немного огня" data-price="43500" data-gram="555Г" data-image="img/icon/pizza3.svg">
+                        <span class="menu-item-price">43500 СУМ</span>
+                        <span class="menu-item-name">Острая пицца </span>
+                        <span class="menu-item-gram">555Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Острая пицца', 43500, 'img/icon/pizza3.svg', '555Г')">Добавить</button>
+                    
+                </div>
+                </div>
+            </div>
+
+            <div id="content7" class="menu-container content-item">
+                <h2 class="burger-desrc">Вок</h2>
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/wok.svg" alt=" Вок с тофу">
+                    <div class="menu-item-details" data-name=" Гурманское комбо с бургером" data-description="Сочный классический хот-дог с колбаской на гриле, кетчупом и горчицей, украшенный луком и зеленью. В комплект входят порция хрустящего картофеля фри и холодный напиток на выбор. Идеальный набор для быстрого и вкусного перекуса." data-price="33500" data-gram="755Г" data-image="img/icon/wok.svg">
+                        <span class="menu-item-price">33500 СУМ</span>
+                        <span class="menu-item-name">Вок с тофу</span>
+                        <span class="menu-item-gram">755Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart(' Вок с тофу',33500, 'img/icon/wok.svg', '755Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/wok1.svg" alt="Вок с креветками ">
+                    <div class="menu-item-details" data-name="Вок с креветками " data-description="Изысканный хот-дог в мягкой булочке, дополненный карамелизованным луком, тягучим сыром и хрустящими жареными луком. Украшение из свежей зелени придаёт блюду аппетитный и насыщенный вид. Превосходный выбор для тех, кто ценит вкус и стиль." data-price="36500" data-gram="595Г" data-image="img/icon/wok1.svg">
+                        <span class="menu-item-price">36500 СУМ</span>
+                        <span class="menu-item-name">Вок с креветками </span>
+                        <span class="menu-item-gram">595Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Вок с креветками ', 36500, 'img/icon/wok1.svg', '595Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/wok2.svg" alt="Вок с говядиной">
+                    <div class="menu-item-details" data-name="Вок с говядиной " data-description="Тонкая пицца с сыром моцарелла, ароматным томатным соусом и сочными начинками на выбор: пепперони, маргарита или грибы. К набору добавлены хрустящие чесночные гренки и охлаждённый напиток. Почувствуйте вкус Италии в каждом кусочке!" data-price="49500" data-gram="675Г" data-image="img/icon/wok2.svg">
+                        <span class="menu-item-price">49500 СУМ</span>
+                        <span class="menu-item-name">Вок с говядиной </span>
+                        <span class="menu-item-gram">675Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Вок с говядиной ', 49500, 'img/icon/wok2.svg', '675Г')">Добавить</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/combo3.svg" alt="Азиатское комбо с воком ">
+                    <div class="menu-item-details" data-name="Азиатское комбо с воком" data-description="Порция аппетитного вок-блюда: обжаренные овощи, нежное мясо или креветки, лапша или рис в соусе терияки. К этому прилагается мини-салат из свежих овощей с кунжутной заправкой и освежающий напиток. Идеальный выбор для любителей восточной кухни." data-price="43500" data-gram="555Г" data-image="img/icon/combo3.svg">
+                        <span class="menu-item-price">43500 СУМ</span>
+                        <span class="menu-item-name">Азиатское комбо </span>
+                        <span class="menu-item-gram">555Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Азиатское комбо с воком ', 43500, 'img/icon/combo3.svg', '555Г')">Добавить</button>
+                    
+                </div>
+                </div>
+            </div>
+
+            <div id="content8" class="menu-container content-item">
+                <h2 class="burger-desrc">Десерты</h2>
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/sweet.svg" alt=" Фруктовая тарталета">
+                    <div class="menu-item-details" data-name=" Фруктовая тарталета" data-description="" data-price="23500" data-gram="155Г" data-image="img/icon/sweet.svg">
+                        <span class="menu-item-price">23500 СУМ</span>
+                        <span class="menu-item-name">Фруктовая тарталета</span>
+                        <span class="menu-item-gram">155Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart(' Фруктовая тарталета',23500, 'img/icon/sweet.svg', '155Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/sweet1.svg" alt="Тирамису">
+                    <div class="menu-item-details" data-name="Тирамису" data-description="" data-price="16500" data-gram="195Г" data-image="img/icon/sweet1.svg">
+                        <span class="menu-item-price">16500 СУМ</span>
+                        <span class="menu-item-name">Тирамису</span>
+                        <span class="menu-item-gram">195Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Тирамису',16500, 'img/icon/sweet1.svg', '195Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/sweet2.svg" alt="Чизкейк с клубникой">
+                    <div class="menu-item-details" data-name="Чизкейк с клубникой" data-description="" data-price="19500" data-gram="175Г" data-image="img/icon/sweet2.svg">
+                        <span class="menu-item-price">19500 СУМ</span>
+                        <span class="menu-item-name">Чизкейк с клубникой</span>
+                        <span class="menu-item-gram">175Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Чизкейк с клубникой', 19500, 'img/icon/sweet2.svg', '175Г')">Добавить</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/sweet3.svg" alt="Шоколадная фондана">
+                    <div class="menu-item-details" data-name="Шоколадная фондана" data-description="" data-price="13500" data-gram="155Г" data-image="img/icon/sweet3.svg">
+                        <span class="menu-item-price">13500 СУМ</span>
+                        <span class="menu-item-name">Шоколадная фондана</span>
+                        <span class="menu-item-gram">155Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Шоколадная фондана', 13500, 'img/icon/sweet3.svg', '155Г')">Добавить</button>
+                    
+                </div>
+                </div>
+            </div>
+
+            <div id="content9" class="menu-container content-item">
+                <h2 class="burger-desrc">Соусы</h2>
+               <div class="menu-list">
+                <div class="menu-item">
+                    <img src="img/icon/sauce.svg" alt="Трио соусов">
+                    <div class="menu-item-details" data-name=" Трио соусов" data-description="" data-price="3500" data-gram="55Г" data-image="img/icon/sauce.svg">
+                        <span class="menu-item-price">3500 СУМ</span>
+                        <span class="menu-item-name">Трио соусов</span>
+                        <span class="menu-item-gram">55Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Трио соусов',3500, 'img/icon/sauce.svg', '55Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/sauce1.svg" alt="Сет соусов">
+                    <div class="menu-item-details" data-name="Сет соусов" data-description="" data-price="6500" data-gram="95Г" data-image="img/icon/sauce1.svg">
+                        <span class="menu-item-price">6500 СУМ</span>
+                        <span class="menu-item-name">Сет соусов</span>
+                        <span class="menu-item-gram">95Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Сет соусов', 6500, 'img/icon/sauce1.svg', '95Г')">Добавить</button>
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/sauce2.svg" alt="Песто сет">
+                    <div class="menu-item-details" data-name="Песто сет " data-description="" data-price="9500" data-gram="75Г" data-image="img/icon/sauce2.svg">
+                        <span class="menu-item-price">9500 СУМ</span>
+                        <span class="menu-item-name">Песто сет </span>
+                        <span class="menu-item-gram">75Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Песто сет ', 9500, 'img/icon/sauce2.svg', '75Г')">Добавить</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/icon/sauce3.svg" alt="Фруктовые соусы">
+                    <div class="menu-item-details" data-name="" data-description="" data-price="3500" data-gram="55Г" data-image="img/icon/sauce3.svg">
+                        <span class="menu-item-price">3500 СУМ</span>
+                        <span class="menu-item-name">Фруктовые соусы</span>
+                        <span class="menu-item-gram">55Г</span>
+                    </div>
+                    <button class="menu-item-button" onclick="addToCart('Фруктовые соусы', 3500, 'img/icon/sauce3.svg', '55Г')">Добавить</button>
+                    
+                </div>
+                </div>
+            </div>
+
+            
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer_main">
+                <img src="/src/img/icon/footerLogo.svg" alt="footerLogo">
+                <div class="footer_info">
+                    <p>Номер для заказа</p>
+                    <p><img src="/src/img/icon/infoLogo.svg" alt="">+998 88 404 34 00</p>
+                </div>
+                <div class="footer_socialMedia">
+                    <p>Мы в соцсетях</p>
+                    <img src="/src/img/icon/tg.svg" alt="insta">
+                    <img src="/src/img/icon/vk.svg" alt="vk">
+                </div>
+                <div class="Footer_adress">
+                    <p>© YourMeal, 2024</p>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+    
+
+    
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>
