@@ -1,0 +1,125 @@
+
+.header__container{
+    background-image: url('/src/img/icon/bg.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header__text {
+    padding-bottom: 20px;
+}
+.header__title {
+    text-align: center;
+    color: azure;
+    padding-bottom: 20px;
+
+}
+.header__title-second {
+    color: #FF5C00 ;
+}
+.header__appeal {
+    font-size: 16px;
+    padding-top: 16px;
+}
+
+
+@media (min-width: 778px) {
+    .header__container{
+        background-image: url('/src/img/Ellipse1.svg');
+        background-repeat: no-repeat;
+        background-size: 100%
+    }
+    .header__title {
+        max-width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        padding-bottom: 60px;
+    }
+    .header__img {
+        width: 250px;
+        
+    }
+    .header__text {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__container {
+        max-width: 1034px;
+        background-image: url('/src/img/Ellipse1.svg');
+        background-repeat: no-repeat;
+        text-align: center; /* Center align the text and logo */
+        
+    }
+    .header__title {
+        max-width: 890px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        margin-bottom: 10px;
+    }
+    .header__title h1 {
+        font-size: 55px;
+    }
+    .header__appeal {
+        font-size: 18px;
+    }
+    .header__img {
+        width: 420px;
+        height: 320px;
+    }
+   
+
+   
+}
+
+@media (min-width: 80rem) { /* 80rem * 16 = 1280px */
+    .header__container {
+        /* Можно расширить контейнер и центрировать его */
+        max-width: 1200px; 
+        margin: 0 auto;
+        /* При желании масштабировать или менять фон */
+        background-size: cover; 
+        background-position: center; /* при необходимости */
+    }
+
+    /* Если нужно увеличить размеры логотипа */
+    .header__logo {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    /* Крупнее текст внутри .header__text */
+    .header__text {
+        font-size: 28px;
+        padding-bottom: 40px;
+    }
+
+    /* Заголовок ещё больше, если хотим */
+    .header__title h1 {
+        font-size: 72px; /* Было 55px, увеличим для 1280px */
+    }
+
+    .header__appeal {
+        font-size: 20px; /* Чуть больше, чем 18px на 1024px */
+        padding-top: 24px; /* Добавим вертикальный отступ */
+    }
+
+    /* Если нужно увеличить саму картинку */
+    .header__img {
+        width: 500px;  /* Было 420px */
+        height: 380px; /* Было 320px */
+    }
+}
+

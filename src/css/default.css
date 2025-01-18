@@ -1,0 +1,153 @@
+html {
+    --container: 300px;
+    --padding-container: 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden ;
+    min-height: 100%;
+
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Nunito;
+    margin: 0 ;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+    overflow-x: hidden ;
+
+}
+
+img, svg {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, p, figure, fieldset {
+    margin: 0;
+}
+
+iframe {
+    border: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+.container {
+    max-width: calc(var(--container) + var(--padding-container)*2);
+    padding: 0 var(--padding-container);
+    margin: 0 auto;
+}
+
+@media (min-width: 778px) {
+    html {
+        --container: 778px;
+        --padding-container: 10px;
+        box-sizing: border-box;
+        position: relative;
+        overflow-x: hidden ;
+        min-height: 100%;
+    
+    }
+    
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+    body {
+        font-family: Nunito;
+        margin: 0 ;
+        min-width: 730px;
+        min-height: 100vh;
+        background-color: aliceblue;
+        color: black;
+        position: relative;
+        overflow-x: hidden ;
+    
+    }
+    
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+    
+    img, svg {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+    }
+    
+    button {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1, h2, h3, p, figure, fieldset {
+        margin: 0;
+    }
+    
+    iframe {
+        border: 0;
+    }
+    
+    fieldset {
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+    }
+    
+    .visually-hidden {
+        position: fixed;
+        transform: scale(0);
+    }
+    
+    .container {
+        max-width: calc(var(--container) + var(--padding-container)*2);
+        padding: 0 var(--padding-container);
+        margin: 0 auto;
+    }
+}
